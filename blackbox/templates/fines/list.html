@@ -1,0 +1,22 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <div class="table-responsive"></div>
+        <table class="table table-dark">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for fine in fines %}
+                    <tr>
+                        <th scope="row">{{fine.id}}</th>
+                        <td>{{fine.name}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
